@@ -160,6 +160,7 @@ RUN if [ ${INSTALL_NODE} = true ]; then \
         && nvm install ${NODE_VERSION} \
         && nvm use ${NODE_VERSION} \
         && nvm alias ${NODE_VERSION} \
+        && npm install -g @nestjs/cli \
         && if [ ${NPM_REGISTRY} ]; then \
         npm config set registry ${NPM_REGISTRY} \
         ;fi \
